@@ -23,7 +23,8 @@ phases:
       - npm run-script build
   post_build:
     commands: 
-      - aws s3 cp build s3://$S3_BUCKET/$CODEBUILD_BUILD_ID/ --recursive --acl public-read
+      # - aws s3 cp build s3://$S3_BUCKET/$CODEBUILD_BUILD_ID/ --recursive --acl public-read
+      - aws s3 cp build s3://$S3_BUCKET/$CODEBUILD_BUILD_ID/
 # artifacts:
 #   files:
 #     - template-export.yml
