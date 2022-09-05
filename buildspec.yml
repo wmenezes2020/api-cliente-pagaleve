@@ -3,13 +3,22 @@ phases:
   install:
     commands:
       # Install all dependencies (including dependencies for running tests)
-      - npm install -g npm@latest
+      # - npm install -g npm@latest
       - npm install
       # - npm install -g jest
       # Install CDK dependencies
       - cd cdk
       # - npm install -g aws-cdk@1.160.0
       - npm install -g aws-cdk
+      - npm install -g @types/node
+      - npm install -g @aws-cdk/assert
+      - npm install -g @types/jest
+      - npm install -g ts-jest
+      - npm install -g ts-node
+      - npm install -g typescript
+      - npm install -g @aws-cdk/aws-lambda
+      - npm install -g @aws-cdk/aws-s3
+      - npm install -g @aws-cdk/core
       - npm install -g @nestjs/cli
       - npm install
       # Discover and run unit tests in the '__tests__' directory
@@ -29,8 +38,8 @@ phases:
       - zip -r function-code.zip .
       - aws s3 cp function-code.zip s3://$S3_BUCKET/$CODEBUILD_BUILD_ID/
       # Use AWS CDK to synthesize the application
-      - cd ../cdk
-      - cdk synth > ../template-export.yml
+      # - cd ../cdk
+      # - cdk synth > ../template-export.yml
 artifacts:
   files:
     - template-export.yml
