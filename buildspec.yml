@@ -10,7 +10,7 @@ phases:
       - npm install -g @nestjs/cli
       - npm install
       # Discover and run unit tests in the '__tests__' directory
-      - npm run test
+      # - npm run test
       - cd ..
   pre_build:
     commands:
