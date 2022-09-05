@@ -7,6 +7,7 @@ phases:
       # Install CDK dependencies
       - cd cdk
       - npm install -g @nestjs/cli
+      - npm install -g jest
       - npm install
       # Discover and run unit tests in the '__tests__' directory
       - npm run test
