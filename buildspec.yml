@@ -3,11 +3,13 @@ phases:
   install:
     commands:
       # Install all dependencies (including dependencies for running tests)
+      - npm install -g npm@latest
       - npm install
       # - npm install -g jest
       # Install CDK dependencies
       - cd cdk
-      - npm install -g aws-cdk@1.160.0
+      # - npm install -g aws-cdk@1.160.0
+      - npm install -g aws-cdk
       - npm install -g @nestjs/cli
       - npm install
       # Discover and run unit tests in the '__tests__' directory
