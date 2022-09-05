@@ -4,7 +4,8 @@ phases:
     commands:
       # Install all dependencies (including dependencies for running tests)
       - npm install
-      - npm install -g jest
+      - npm install -g aws-cdk
+      # - npm install -g jest
       # Install CDK dependencies
       - cd cdk
       - npm install -g @nestjs/cli
