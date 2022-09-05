@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: 2022-09-05
+AWSTemplateFormatVersion: 2010-09-09
 Description: A Node web service deployed to AWS Lambda.
 
 Parameters:
