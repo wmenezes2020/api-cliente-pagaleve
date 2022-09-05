@@ -10,15 +10,6 @@ phases:
       - cd cdk
       # - npm install -g aws-cdk@1.160.0
       - npm install -g aws-cdk
-      - npm install -g @types/node
-      - npm install -g @aws-cdk/assert
-      - npm install -g @types/jest
-      - npm install -g ts-jest
-      - npm install -g ts-node
-      - npm install -g typescript
-      - npm install -g @aws-cdk/aws-lambda
-      - npm install -g @aws-cdk/aws-s3
-      - npm install -g @aws-cdk/core
       - npm install -g @nestjs/cli
       - npm install
       # Discover and run unit tests in the '__tests__' directory
