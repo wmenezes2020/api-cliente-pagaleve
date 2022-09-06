@@ -4,20 +4,10 @@ phases:
     runtime-versions:
       nodejs: 16
     commands:
-      # Install all dependencies (including dependencies for running tests)
-      # - npm install -g aws-cdk@1.160.0
-      # - npm install -g aws-cdk
       - npm install -g @nestjs/cli
+  pre_build:
+    commands:
       - npm install
-      # Discover and run unit tests in the '__tests__' directory
-      # - npm run test
-  # pre_build:
-  #   commands:
-  #     # Remove all dependencies not needed for the Lambda deployment package (the packages from devDependencies in package.json)
-  #     - npm prune --production
-  #     # Copy artifacts to a separate folder
-  #     - mkdir function-code
-  #     - cp -r src node_modules function-code
   build:
     commands:
       - npm run-script build
@@ -28,3 +18,8 @@ phases:
 # artifacts:
 #   files:
 #     - template-export.yml
+artifacts:
+  files:
+    - src/**/*
+    - package.json
+    - node_modules/**/*
