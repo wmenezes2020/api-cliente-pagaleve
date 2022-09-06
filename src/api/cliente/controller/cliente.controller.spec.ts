@@ -72,7 +72,11 @@ describe('ClienteController', () => {
   it('searchCliente', async () => {
     const query: SearchClienteDto = {
       Cpf: '12345678900',
-      Email: null
+      Email: '',
+      Nome: '',
+      Uf: '',
+      Cidade: '',
+      DtNasc: ''
     };
     const result = await controller.searchCliente(query);
     expect(controller.searchCliente).toBeDefined();
